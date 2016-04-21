@@ -1,6 +1,6 @@
 
 - 
-  version: 0.1
+  version: 0.1.{build}
   init:
   - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
   branches:
@@ -22,7 +22,7 @@
     name: AssemblyInfos
     type: zip
 -
-  version: 0.1
+  version: 0.1.{build}
   branches:
     only:
       - master
