@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Libraries", "00 Libraries", "{3AAEA00F-43AE-40BF-93A0-2A198298D1E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "20 Tests", "20 Tests", "{CB94F693-4979-42D5-9689-D097FD5ADCA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamCityRestApiWrapper", "TeamCityRestApiWrapper\TeamCityRestApiWrapper.csproj", "{F1DB7F23-6FFC-40CD-B464-591DBC528D86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamCityRestApiWrapper.Tests", "TeamCityRestApiWrapper.Tests\TeamCityRestApiWrapper.Tests.csproj", "{B83D0D5A-8AF7-44DC-AEFA-99492E70EC6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1DB7F23-6FFC-40CD-B464-591DBC528D86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1DB7F23-6FFC-40CD-B464-591DBC528D86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1DB7F23-6FFC-40CD-B464-591DBC528D86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1DB7F23-6FFC-40CD-B464-591DBC528D86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B83D0D5A-8AF7-44DC-AEFA-99492E70EC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83D0D5A-8AF7-44DC-AEFA-99492E70EC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83D0D5A-8AF7-44DC-AEFA-99492E70EC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B83D0D5A-8AF7-44DC-AEFA-99492E70EC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1DB7F23-6FFC-40CD-B464-591DBC528D86} = {3AAEA00F-43AE-40BF-93A0-2A198298D1E3}
+		{B83D0D5A-8AF7-44DC-AEFA-99492E70EC6B} = {CB94F693-4979-42D5-9689-D097FD5ADCA0}
+	EndGlobalSection
+EndGlobal
