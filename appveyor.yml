@@ -1,7 +1,7 @@
 -
   init:
     - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
-  major_minor: '0.1'
+  major_minor: 0.1
   version: '{major_minor}.{build}'
   appveyor_repo_tag: true
   assembly_informational_version: '{assembly_file_version}'
