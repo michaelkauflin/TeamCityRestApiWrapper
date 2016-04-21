@@ -1,28 +1,39 @@
--
+
+- 
+  version: 0.1
   init:
-    - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
-  major_minor: 0.1
-  version: '{major_minor}.{build}'
-  appveyor_repo_tag: true
-  assembly_informational_version: '{assembly_file_version}'
--
+  - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
   branches:
     except:
       - master
-  assembly_file_version: '{major_minor}.0.{build}'
-  assembly_informational_version: '{version}.pre-{pre_release}'
--
-  configuration: Release
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '{major_minor}.0.0'
-    assembly_file_version: '{assembly_file_version}'
-    assembly_informational_version: '{assembly_informational_version}'
+    assembly_version: '{version}.0.0'
+    assembly_file_version: '{version}.0.{build}'
+    assembly_informational_version: '{version}.{build}.pre-{pre_release}'
+  configuration: Release
   build:
     #publish_nuget: true
     #publish_nuget_symbols: true
     verbosity: minimal
+-
+  version: 0.1
+  branches:
+    only:
+      - master
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{version}.0.0'
+    assembly_file_version: '{version}.0.{build}'
+    assembly_informational_version: '{assembly_file_version}'
+  configuration: Release
+  build:
+    #publish_nuget: true
+    #publish_nuget_symbols: true
+    verbosity: minimal
+  
 #after_build:
 #- ps: 
 #deploy:
