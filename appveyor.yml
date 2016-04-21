@@ -1,11 +1,10 @@
-init:
-  - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
-
-major_minor: '0.1'
-version: '{major_minor}.{build}'
-appveyor_repo_tag: true
-assembly_informational_version: '{assembly_file_version}'
-
+-
+  init:
+    - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
+  major_minor: '0.1'
+  version: '{major_minor}.{build}'
+  appveyor_repo_tag: true
+  assembly_informational_version: '{assembly_file_version}'
 -
   branches:
     except:
@@ -13,7 +12,6 @@ assembly_informational_version: '{assembly_file_version}'
   assembly_file_version: '{major_minor}.0.{build}'
   assembly_informational_version: '{version}.pre-{pre_release}'
 -
-
   configuration: Release
   assembly_info:
     patch: true
