@@ -17,6 +17,10 @@
     #publish_nuget: true
     #publish_nuget_symbols: true
     verbosity: minimal
+  artifacts:
+  - path: '**\AssemblyInfo.*'
+    name: AssemblyInfos
+    type: zip
 -
   version: 0.1
   branches:
