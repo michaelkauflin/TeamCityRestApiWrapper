@@ -6,28 +6,26 @@ version: '{major_minor}.{build}'
 assembly_file_version: '{major_minor}.0.{build}'
 assembly_informational_version: '{version}.pre-{pre_release}'
 
-branches:
- only:
-    - master
-appveyor_repo_tag: true
-assembly_informational_version: '{assembly_file_version}'
+# master only
+-
+  branches:
+    only:
+      - master
+    appveyor_repo_tag: true
+    assembly_informational_version: '{assembly_file_version}'
 	
-
-
-#branches:
-#  only:
-#  - master
-configuration: Release
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '{major_minor}.0.0'
-  assembly_file_version: '{assembly_file_version}'
-  assembly_informational_version: '{assembly_informational_version}'
-build:
-  #publish_nuget: true
-  #publish_nuget_symbols: true
-  verbosity: minimal
+-
+  configuration: Release
+  assembly_info:
+    patch: true
+    file: '**\AssemblyInfo.*'
+    assembly_version: '{major_minor}.0.0'
+    assembly_file_version: '{assembly_file_version}'
+    assembly_informational_version: '{assembly_informational_version}'
+  build:
+    #publish_nuget: true
+    #publish_nuget_symbols: true
+    verbosity: minimal
 #after_build:
 #- ps: 
 #deploy:
