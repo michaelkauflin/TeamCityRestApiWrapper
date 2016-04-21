@@ -2,7 +2,7 @@
   init:
     - ps: $env:my_version=0.1
     - ps: $pre_release = Get-Date -Format "yyyymmdd-hhmmss"
-  version: $env:my_version.{build}  
+  version: 0.1.{build}  
   branches:
     except:
       - master
@@ -24,7 +24,7 @@
 -
   init:
     - ps: $env:my_version=0.1
-  version: $env:my_version.{build}
+  version: 0.1.{build}
   branches:
     only:
       - master
