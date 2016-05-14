@@ -9,9 +9,9 @@
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '$env:my_version'.0.0
-    assembly_file_version: '$env:my_version'.0.{build}
-    assembly_informational_version: '$env:my_version'.{build}.pre-'$env:pre_release'
+    assembly_version: '$(my_version)'.0.0
+    assembly_file_version: '$(my_version)'.0.{build}
+    assembly_informational_version: '$(my_version)'.{build}.pre-'$(pre_release)'
   configuration: Release
   build:
     #publish_nuget: true
@@ -31,8 +31,8 @@
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '$env:my_version'.0.0
-    assembly_file_version: '$env:my_version'.0.{build}
+    assembly_version: '$(my_version)'.0.0
+    assembly_file_version: '$(my_version)'.0.{build}
     assembly_informational_version: '{assembly_file_version}'
   configuration: Release
   build:
