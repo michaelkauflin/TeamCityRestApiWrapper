@@ -1,3 +1,15 @@
+version: 0.1.0.{build}
+
+environment:
+  packageVersion: 0.1.0
+
+init:
+ - ps: $env.pre_release = Get-Date -Format "yyyyMMdd-HHmmss"
+ - ps: $env:assembly_version = "$env:packageVersion.0"
+ - ps: $env:assembly_file_version = "$env:packageVersion.$env:appveyor_build_number"
+ - ps: $env:assembly_informational_version = "$env:packageVersion-pre-$env:pre_release"
+ - ps: Update-AppveyorBuild -Version $env:buildVersion
+
 -
   init:
     - ps: $env:my_version="0.1"
@@ -9,9 +21,9 @@
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '$(my_version)'.0.0
-    assembly_file_version: '$(my_version)'.0.{build}
-    assembly_informational_version: '$(my_version)'.{build}.pre-'$(pre_release)'
+    assembly_version: '$(assembly_version)'
+    assembly_file_version: '$(assembly_file_version)'
+    assembly_informational_version: '$(assembly_informational_version)'
   configuration: Release
   build:
     #publish_nuget: true
@@ -31,9 +43,9 @@
   assembly_info:
     patch: true
     file: '**\AssemblyInfo.*'
-    assembly_version: '$(my_version)'.0.0
-    assembly_file_version: '$(my_version)'.0.{build}
-    assembly_informational_version: '{assembly_file_version}'
+    assembly_version: '$(assembly_version)'
+    assembly_file_version: '$(assembly_file_version)'
+    assembly_informational_version: '$(assembly_file_version)'
   configuration: Release
   build:
     #publish_nuget: true
